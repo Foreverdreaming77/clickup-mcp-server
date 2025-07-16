@@ -191,7 +191,7 @@ export function startSSEServer() {
   // Function to create and start HTTP server
   function startHttpServer() {
     const httpServer = http.createServer(app);
-    httpServer.listen(PORT, '127.0.0.1', () => {
+    httpServer.listen(PORT, '0.0.0.0', () => {
       logger.info('ClickUp MCP Server (HTTP) started', {
         port: PORT,
         protocol: 'http',
